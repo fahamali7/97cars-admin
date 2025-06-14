@@ -96,7 +96,7 @@ const Sidebar2 = () => {
   );
 };
 
-const NavItem = ({ icon, label, to }) => {
+export const NavItem = ({ icon, label, to }) => {
   const location = useLocation();
   const active = location.pathname === to;
   return (

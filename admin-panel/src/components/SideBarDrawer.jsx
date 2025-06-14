@@ -11,6 +11,7 @@ import {
   Flex,
   Divider
 } from "@chakra-ui/react";
+import React from "react";
 import {
   FiGrid,
   FiUser,
@@ -19,7 +20,8 @@ import {
   FiClipboard,
   FiHelpCircle
 } from "react-icons/fi";
-
+import { Link, useLocation } from "react-router-dom";
+// import { NavItem } from "./Sidebar2";
 const SidebarDrawer = ({ isOpen, onClose }) => {
   return (
     <Drawer isOpen={isOpen} placement="left" onClose={onClose}>
@@ -36,11 +38,11 @@ const SidebarDrawer = ({ isOpen, onClose }) => {
 
         <DrawerBody>
           <VStack spacing={5} align="stretch">
-            <NavItem icon={FiGrid} label="Dashboard" active />
-            <NavItem icon={FiUser} label="Users" />
-            <NavItem icon={FiAward} label="Transactions" />
-            <NavItem icon={FiFileText} label="Catalogues" />
-            <NavItem icon={FiClipboard} label="Other" />
+            <NavItem icon={FiGrid} label="Dashboard" to= "/" />
+            <NavItem icon={FiUser} label="Users" to="/users" />
+            <NavItem icon={FiAward} label="Transactions" to="/transactions" />
+            <NavItem icon={FiFileText} label="Catalogues" to ="/catalogues" />
+            <NavItem icon={FiClipboard} label="Other" to ="/others" />
             <Divider />
             <NavItem icon={FiHelpCircle} label="Help & Support" />
           </VStack>
@@ -50,7 +52,11 @@ const SidebarDrawer = ({ isOpen, onClose }) => {
   );
 };
 
-const NavItem = ({ icon, label, active }) => (
+const NavItem = ({ icon, label, to }) => {
+  const location = useLocation();
+  const active = location.pathname === to;
+  return (
+    <Link to={to} style={{ textDecoration: "none" }}>
   <Flex
     align="center"
     p={3}
@@ -64,6 +70,7 @@ const NavItem = ({ icon, label, active }) => (
     <Icon as={icon} boxSize={5} mr={3} />
     <Text fontSize="sm">{label}</Text>
   </Flex>
+  </Link>
 );
-
+};
 export default SidebarDrawer;
