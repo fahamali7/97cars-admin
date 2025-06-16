@@ -52,7 +52,7 @@ const Sidebar2 = () => {
         />
         {!isDesktop && <DrawerCloseButton position="relative" top={0} right={0} />}
       </Flex>
-      <Divider mb={4} />
+      {/* <Divider mb={4} /> */}
       <VStack spacing={5} align="stretch">
         <NavItem icon={FiGrid} label="Dashboard" to = "/" />
         <NavItem icon={FiUser} label="Users" to ="/users" />
