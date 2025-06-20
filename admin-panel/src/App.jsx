@@ -32,12 +32,14 @@ import { BrowserRouter as Router, Routes, Route } from "react-router-dom";
 
 import Layout2 from "./components/Layout2"; // adjust path if needed
 import ComingSoon from "./pages/ComingSoon";
-import Help from "./pages/Help";
 import Dashboard from "./pages/Dashboard";
 import Users from "./pages/Users";
 import Catalogue from "./pages/Catalogue";
-import Transactions from "./pages/Transactions";
-import Other from "./pages/Other";
+import Transactions from "./pages/RTOData";
+import Other from "./pages/Cars";
+import CatalogueLogin from "./pages/CatalogueLogin";
+import RTOdata from "./pages/RTOData";
+import CarData from "./pages/Cars";
 
 const App =() =>{
 return (
@@ -48,10 +50,10 @@ return (
         <Route index element={<Dashboard />}/>
         <Route path="dashboard" element={<Dashboard />} />
         <Route path="users" element={<Users />} />
-        <Route path ="transactions" element={<Transactions />} />
+        <Route path ="rto" element={<RTOdata />} />
         <Route path="catalogues" element={<Catalogue />} />
-        <Route path="others" element={<Other />} />
-        <Route path="help" element={<Help />} />
+        <Route path="cars" element={<CarData />} />
+        <Route path="admin-login" element= {<CatalogueLogin/>}/>
       </Route>
       </Routes>
       </Router>
