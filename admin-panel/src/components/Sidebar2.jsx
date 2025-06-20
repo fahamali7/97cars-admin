@@ -26,7 +26,8 @@ import {
   FiClipboard,
   FiHelpCircle,
   FiUser,
-  FiAward
+  FiAward,
+  FiHome
 } from "react-icons/fi";
 import { HamburgerIcon } from '@chakra-ui/icons';
 import {Link, useLocation} from 'react-router-dom';
@@ -44,7 +45,7 @@ const Sidebar2 = () => {
       borderRightWidth="1px"
       p={4}
     >
-      <Flex align="center" mb={6} justifyContent="space-between">
+      <Flex align="center" mb={10} justifyContent="space-between">
         <img
           src='https://97cars.com/logo.png'
           alt="Logo"
@@ -53,13 +54,12 @@ const Sidebar2 = () => {
         {!isDesktop && <DrawerCloseButton position="relative" top={0} right={0} />}
       </Flex>
       {/* <Divider mb={4} /> */}
-      <VStack spacing={5} align="stretch">
+      <VStack spacing={6} align="stretch">
         <NavItem icon={FiGrid} label="Dashboard" to = "/" />
         <NavItem icon={FiUser} label="Users" to ="/users" />
-        <NavItem icon={FiAward} label="Transactions" to ="/transactions" />
         <NavItem icon={FiFileText} label="Catalogues"  to = "/catalogues"/>
-        <NavItem icon={FiClipboard} label="Other" to ="/others" />
-        <NavItem icon={FiHelpCircle} label="Help & Support" to = "/Contact-Us" />
+        <NavItem icon={FiHome} label="RTOs" to ="/rto" />
+        <NavItem icon={FiClipboard} label="Cars" to ="/cars" />
       </VStack>
     </Box>
   );

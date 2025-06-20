@@ -18,7 +18,8 @@ import {
   FiAward,
   FiFileText,
   FiClipboard,
-  FiHelpCircle
+  FiHelpCircle,
+  FiHome
 } from "react-icons/fi";
 import { Link, useLocation } from "react-router-dom";
 // import { NavItem } from "./Sidebar2";
@@ -27,7 +28,7 @@ const SidebarDrawer = ({ isOpen, onClose }) => {
     <Drawer isOpen={isOpen} placement="left" onClose={onClose}>
       <DrawerOverlay />
       <DrawerContent>
-        <DrawerHeader borderBottom="1px solid #edf2f7">
+        <DrawerHeader borderBottom="1px solid #edf2f7" mb={8}>
           <img
             src="https://97cars.com/logo.png"
             alt="Logo"
@@ -37,14 +38,13 @@ const SidebarDrawer = ({ isOpen, onClose }) => {
         </DrawerHeader>
 
         <DrawerBody>
-          <VStack spacing={5} align="stretch">
+          <VStack spacing={8} align="stretch">
             <NavItem icon={FiGrid} label="Dashboard" to= "/" />
             <NavItem icon={FiUser} label="Users" to="/users" />
-            <NavItem icon={FiAward} label="Transactions" to="/transactions" />
             <NavItem icon={FiFileText} label="Catalogues" to ="/catalogues" />
-            <NavItem icon={FiClipboard} label="Other" to ="/others" />
+            <NavItem icon={FiHome} label="RTOs" to="/rto" />
+            <NavItem icon={FiClipboard} label="Cars" to ="/cars" />
             <Divider />
-            <NavItem icon={FiHelpCircle} label="Help & Support" />
           </VStack>
         </DrawerBody>
       </DrawerContent>
