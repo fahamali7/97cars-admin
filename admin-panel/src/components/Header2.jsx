@@ -13,7 +13,7 @@ import {
   Box
 } from "@chakra-ui/react";
 import { HamburgerIcon } from "@chakra-ui/icons";
-import SidebarDrawer from "./SidebarDrawer"; // separate drawer version
+import SidebarDrawer from "./SideBarDrawer"; // separate drawer version
 
 const Header = () => {
   const { isOpen, onOpen, onClose } = useDisclosure();
