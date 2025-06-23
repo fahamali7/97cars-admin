@@ -18,7 +18,6 @@ import {
   FiAward,
   FiFileText,
   FiClipboard,
-  FiHelpCircle,
   FiHome
 } from "react-icons/fi";
 import { Link, useLocation } from "react-router-dom";
@@ -34,16 +33,16 @@ const SidebarDrawer = ({ isOpen, onClose }) => {
             alt="Logo"
             style={{ height: "30px" }}
           />
-          <DrawerCloseButton />
+          <DrawerCloseButton  />
         </DrawerHeader>
 
         <DrawerBody>
           <VStack spacing={8} align="stretch">
-            <NavItem icon={FiGrid} label="Dashboard" to= "/" />
-            <NavItem icon={FiUser} label="Users" to="/users" />
-            <NavItem icon={FiFileText} label="Catalogues" to ="/catalogues" />
-            <NavItem icon={FiHome} label="RTOs" to="/rto" />
-            <NavItem icon={FiClipboard} label="Cars" to ="/cars" />
+            <NavItem icon={FiGrid} label="Dashboard" to= "/" onClose={onClose} />
+            <NavItem icon={FiUser} label="Users" to="/users" onClose={onClose} />
+            <NavItem icon={FiFileText} label="Catalogues" to ="/catalogues" onClose = {onClose} />
+            <NavItem icon={FiHome} label="RTOs" to="/rto" onClose = {onClose} />
+            <NavItem icon={FiClipboard} label="Cars" to ="/cars" onClose ={onClose} />
             <Divider />
           </VStack>
         </DrawerBody>
@@ -52,11 +51,11 @@ const SidebarDrawer = ({ isOpen, onClose }) => {
   );
 };
 
-const NavItem = ({ icon, label, to }) => {
+const NavItem = ({ icon, label, to, onClose }) => {
   const location = useLocation();
   const active = location.pathname === to;
   return (
-    <Link to={to} style={{ textDecoration: "none" }}>
+    <Link to={to} style={{ textDecoration: "none" }} onClick={onClose}>
   <Flex
     align="center"
     p={3}

@@ -58,8 +58,6 @@ const Header = () => {
           </MenuButton>
           <MenuList>
             <MenuItem>My Account</MenuItem>
-            <MenuItem>Payments</MenuItem>
-            <MenuItem>Help</MenuItem>
             <MenuItem>Logout</MenuItem>
           </MenuList>
         </Menu>

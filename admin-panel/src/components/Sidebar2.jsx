@@ -55,11 +55,11 @@ const Sidebar2 = () => {
       </Flex>
       {/* <Divider mb={4} /> */}
       <VStack spacing={6} align="stretch">
-        <NavItem icon={FiGrid} label="Dashboard" to = "/" />
-        <NavItem icon={FiUser} label="Users" to ="/users" />
-        <NavItem icon={FiFileText} label="Catalogues"  to = "/catalogues"/>
+        <NavItem icon={FiGrid} label="Dashboard" to = "/"  />
+        <NavItem icon={FiUser} label="Users" to ="/users"  />
+        <NavItem icon={FiFileText} label="Catalogues"  to = "/catalogues" />
         <NavItem icon={FiHome} label="RTOs" to ="/rto" />
-        <NavItem icon={FiClipboard} label="Cars" to ="/cars" />
+        <NavItem icon={FiClipboard} label="Cars" to ="/cars"  />
       </VStack>
     </Box>
   );

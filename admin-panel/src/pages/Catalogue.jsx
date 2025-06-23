@@ -1,9 +1,9 @@
 import React from "react";
-import ComingSoon from "./ComingSoon";
+import CatalogueCard from "../components/CatalogueCard";
 
-const Catalogue = ()=>{
-    return(
-        <ComingSoon/>
-    )
+const Catalogue =()=>{
+    return (
+<CatalogueCard/>
+    );
 }
 export default Catalogue;
